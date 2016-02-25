@@ -9,7 +9,6 @@ chown -R transmission:transmission /transmission
 
 exec /usr/bin/transmission-daemon \
 	-f \
-	-g /transmission \
 	-w /transmission/downloads \
 	-c /transmission/inbox \
 	--incomplete-dir /transmission/spool \
