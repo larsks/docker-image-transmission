@@ -8,8 +8,4 @@ VOLUME /transmission
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["/usr/bin/transmission-daemon", "-f", "-a", "*", \
-	"-w", "/transmission/downloads", \
-	"-c", "/transmission/inbox", \
-	"--incomplete-dir", "/transmission/spool"]
-
+CMD ["-a", "*"]
