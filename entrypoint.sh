@@ -7,7 +7,7 @@ mkdir -p /transmission/spool
 # make sure permissions are correct on tranmission directory
 chown -R transmission:transmission /transmission
 
-exec /usr/bin/transmission-daemoon \
+exec /usr/bin/transmission-daemon \
 	-f \
 	-w /transmission/downloads \
 	-c /transmission/inbox \
