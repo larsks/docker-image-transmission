@@ -1,0 +1,11 @@
+#!/bin/sh
+
+: ${TXN_DIR:=/transmission}
+export TXN_DIR
+
+exec /usr/bin/transmission-daemon \
+	-f \
+	-w $TXN_DIR/downloads \
+	-c $TXN_DIR/inbox \
+	--incomplete-dir $TXN_DIR/spool \
+	--torrent-done-script data/trigger-torrent-done

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+if [ -d /services/torrent-done ]; then
+	s6-svc -o /services/torrent-done
+fi

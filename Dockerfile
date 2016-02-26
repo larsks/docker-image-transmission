@@ -1,11 +1,6 @@
-FROM alpine
+FROM larsks/alpine-s6
 
-RUN apk update
 RUN apk add transmission-daemon
-
-ENV TRANSMISSION_HOME=/transmission
 VOLUME /transmission
-
-COPY entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
-CMD ["-a", "*"]
+COPY ensure_dirs.sh /docker/entrypoint.d/ensure_dirs
+COPY services /services
