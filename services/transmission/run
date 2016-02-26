@@ -7,5 +7,4 @@ exec /usr/bin/transmission-daemon \
 	-f \
 	-w $TXN_DIR/downloads \
 	-c $TXN_DIR/inbox \
-	--incomplete-dir $TXN_DIR/spool \
-	--torrent-done-script data/trigger-torrent-done
+	--incomplete-dir $TXN_DIR/spool
