@@ -5,6 +5,7 @@ export TXN_DIR
 
 exec /usr/bin/transmission-daemon \
 	-f \
+	-g $TXN_DIR \
 	-w $TXN_DIR/downloads \
 	-c $TXN_DIR/inbox \
 	--incomplete-dir $TXN_DIR/spool
